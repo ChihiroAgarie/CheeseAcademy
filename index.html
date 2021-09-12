@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>チーズアカデミー</title>
+    <meta name="description" content=“世界を変えるチーズを作ろう。チーズアカデミーは、チーズ職人を養成するための学校です。”>
+    <meta property="og:title" content="チーズアカデミー">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="チーズアカデミー" />
+    <meta property="og:description" content="世界を変えるチーズを作ろう。チーズアカデミーは、チーズ職人を養成するための学校です。" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="#">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- あらかじめcssを読み込んでいるので設定しなくてOK-->
+</head>
+
+<body>
+    <!-- ここから記述しよう -->
+    <!-- クイズスタート画面 -->
+    <div class="wrapper">
+        <div class="first_text">
+            <p class="fadeinAnime5">チーズ好きの</p>
+            <p class="delay-time1 fadeinAnime4">チーズ好きによる</p>
+            <p class="delay-time2 fadeinAnime3">チーズ好きのための</p>
+            <p class="delay-time3 fadeinAnime2">チーズ職人養成学校</p>
+            <h1>チーズアカデミー<br>FUKUOKA</h1>
+        </div>
+        <div class="quiz_container">
+            <div class="quiz_start" id="quiz_start">
+                <div class="quiz_start_text">
+                    <div class="quiz_start_word">
+                        <p>早速だが<br>君のチーズ愛を見せてもらうよ❤️</p>
+                    </div>
+                    <div class="quiz_start_btn">
+                        <input type="button" value="チーズ愛を試す" onclick="clickBtn1()" id="clickBtn" />
+                        <!-- <a href="#">チーズ愛を試す</a> -->
+                    </div>
+                </div>
+                <div class="quiz_start_img">
+                    <img src="img/img1.png" alt="チーズ職人">
+                </div>
+            </div>
+
+            <!-- テスト -->
+            <div class="container" id="container">
+                <p class="question" id="question"></p>
+                <ul class="choices" id="choices"></ul>
+                <div class="btn disabled" id="btn">🐭 Next 🐭</div>
+
+                <div id="result" class="quiz_correct hidden">
+                    <div class="quiz_correct_text">
+                        <div class="quiz_correct_word">
+                            <p class="quiz_correct_all"></p>
+                            <p id="result_p"></p>
+                        </div>
+                        <div class="quiz_correct_btn">
+                            <a href="" id="result_a"></a>
+                        </div>
+                    </div>
+                    <div class="quiz_correct_img">
+                        <img src="img/img1.png" alt="チーズ職人">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript記述 -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

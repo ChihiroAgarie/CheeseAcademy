@@ -1,0 +1,449 @@
+@charset "utf-8";
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+	background-color: #ffd700;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+
+/*大きさなどベース設定
+---------------------*/
+.wrapper{
+	width: 980px;
+	margin: 0 auto;
+	
+}
+
+/*first_text
+---------------------*/
+.first_text{
+	text-align: center;
+	width: 100%;
+	height: 700px;
+	
+}
+
+.first_text p{
+	font-size: 60px;
+	font-weight: bold;
+	opacity: 0;
+	margin-top: 40px;
+}
+
+.fadeinAnime5{
+	animation-name: fadein;
+    animation-duration: 5s;
+	opacity: 0;
+}
+
+.fadeinAnime4{
+	animation-name: fadein;
+    animation-duration: 4s;
+	opacity: 0;
+}
+
+.fadeinAnime3{
+	animation-name: fadein;
+    animation-duration: 3s;
+	opacity: 0;
+}
+
+.fadeinAnime2{
+	animation-name: fadein;
+    animation-duration: 2s;
+	opacity: 0;
+}
+
+@keyframes fadein{
+    from{
+    opacity: 0;
+    transform: translatesy(20px);
+    }
+    to{
+    opacity: 1;
+    transform: translatey(0);
+	overflow:hidden;
+    }
+}
+
+.delay-time1{
+animation-delay: 1s;
+}
+
+.delay-time2{
+animation-delay: 2s;
+}
+
+.delay-time3{
+animation-delay:3s;
+}
+
+.first_text h1{
+	font-size: 120px;
+	font-weight: bold;
+	color: #fff;
+	width: 100%;
+	margin: 0 auto;
+	text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	animation: zoom-in-anim 3s;
+	animation-delay: 5s;
+	opacity: 0;
+	position: absolute;
+	top: 170px;
+	left: 0;
+}
+
+@keyframes zoom-in-anim {
+	0% {
+		opacity: 0;
+	transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+	transform: scale(1);
+	}
+}
+
+/*quiz-start
+---------------------*/
+.quiz_container{
+	position: relative;
+	margin-bottom: 100px;
+	
+
+}
+
+.quiz_start{
+	display: flex;
+	background-color: white;
+	animation-name: fadein;
+    animation-duration: 3s;
+	animation-delay: 8s;
+	opacity: 0;
+	position: absolute;
+	top: -660px;
+	margin: 0 auto;
+	width: 100%;
+	animation-fill-mode:forwards;
+}
+
+@keyframes fadein{
+    from{
+    opacity: 0;
+    transform: translatesy(20px);
+    }
+    to{
+    opacity: 1;
+    transform: translatey(0);
+	visibility: visible;
+    }
+}
+
+
+.quiz_start_text{
+	width: 60%;
+	height: 552px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.quiz_start_text p{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.quiz_start_text a{
+	font-size: 24px;
+	color: black;
+	display: block;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.quiz_start_btn{
+	width: 300px;
+	height: 80px;
+	background-color: #ffd700;
+	border: 3px solid black;
+}
+
+.quiz_start_btn input{
+	font-size: 24px;
+	color: black;
+	display: block;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.quiz_start_btn:hover {
+	opacity: 0.5 ;
+}
+
+.quiz_start_img{
+	width: 40%;
+	display: flex;
+    align-items: center;
+}
+
+.quiz_start_img img{
+	width: 90%;
+	
+}
+
+
+/* test */
+.container{
+	background-color: #fff;
+	width: 100%;
+	margin: 8px auto;
+	padding: 40px;
+	position: absolute;
+	top: -660px;;
+	left: 0;
+	margin: 0 auto;
+	width: 100%;
+	transition: 0.4s;
+}
+
+.question{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.choices{
+	list-style: none;
+	padding: 0;
+}
+
+.choices li{
+	font-size: 24px;
+	font-weight: bold;
+	color: black;
+	width: 600px;
+	height: 60px;
+	border: 1px solid black;
+	padding: 10px;
+	margin: 20px auto;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+}
+
+.choices li:hover{
+	opacity: 0.5;
+}
+
+
+.choices li.correct{
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+	color: #155724;
+	font-weight: bold;
+}
+
+.choices li.correct::after{
+	content:'　◯';
+}
+
+
+.choices li.wrong{
+	background-color: #f8d8da;
+	border-color: #f5c6cb;
+	color: #721c24;
+	font-weight: bold;
+}
+
+.choices li.wrong::after{
+	content:'　×';
+}
+
+.btn{
+	background-color:#ffd700;
+	border-radius:100px;
+	width: 200px;
+	height: 50px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px;
+	text-align: center;
+	margin: 40px auto 0px;
+}
+
+.disabled{
+	background-color: #ccc;
+
+}
+
+.btn:hover{
+	opacity: 0.7;
+}
+
+#result{
+	position: absolute;
+	top:0;
+	left: 0;
+	margin: 0 auto;
+	width: 100%;
+	transition: 0.4s;
+}
+
+#result.hidden{
+	transform: translateY(-500px);
+	display: none;
+}
+
+/*quiz-collect
+---------------------*/
+.quiz_correct{
+	display: flex;
+	background-color: white;
+}
+
+.quiz_correct_text{
+	width: 60%;
+	height: 552px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.quiz_correct_text p{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+
+.quiz_correct_text a{
+	font-size: 24px;
+	color: black;
+	display: block;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.quiz_correct_btn{
+	width: 300px;
+	height: 80px;
+	background-color: #ffd700;
+	border: 3px solid black;
+}
+
+.quiz_correct_btn:hover {
+	opacity: 0.5 ;
+}
+
+.quiz_correct_img{
+	width: 40%;
+	display: flex;
+    align-items: center;
+}
+
+.quiz_correct_img img{
+	width: 90%;
+	
+}
+
+/*quiz-incollect
+---------------------*/
+.quiz_incorrect{
+	display: flex;
+	background-color: white;
+}
+
+.quiz_incorrect_text{
+	width: 60%;
+	height: 552px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.quiz_incorrect_text p{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+
+.quiz_incorrect_text a{
+	font-size: 24px;
+	color: black;
+	display: block;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.quiz_incorrect_btn{
+	width: 300px;
+	height: 80px;
+	background-color: #ffd700;
+	border: 3px solid black;
+}
+
+.quiz_incorrect_btn:hover {
+	opacity: 0.5 ;
+}
+
+.quiz_incorrect_img{
+	width: 40%;
+	display: flex;
+    align-items: center;
+}
+
+.quiz_incorrect_img img{
+	width: 90%;
+	
+}
